@@ -43,9 +43,9 @@ var config = {
     console.log(childSnapshot.val());
   
     var trainName = childSnapshot.val().name;
-    var trainDestination = childSnapshot.val().role;
-    var trainFrequency = childSnapshot.val().start;
-    var trainArrival = childSnapshot.val().rate;
+    var trainDestination = childSnapshot.val().destination;
+    var trainFrequency = childSnapshot.val().arrival;
+    var trainArrival = childSnapshot.val().frequency;
   
     console.log(trainName);
     console.log(trainDestination);
@@ -57,7 +57,6 @@ var config = {
     var newRow = $("<tr>").append(
       $("<td>").text(trainName),
       $("<td>").text(trainDestination),
-      $("<td>").text(empStartPretty),
       $("<td>").text(trainFrequency),
       $("<td>").text(trainArrival),
     );
